@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body class="page-{{ page.title | slugify }} page-{{ page.layout }}">
+
+    {% include header.html %}
+
+    <main class="main-content{% unless page.title == 'Home' %} grid-container {% endunless %}" id="main-content" aria-label="Content">
+      <div>
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+//<![CDATA[
+      var usasearch_config = { siteHandle:"a11y4teams" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]>
+</script>
+
+  </body>
+
+</html>

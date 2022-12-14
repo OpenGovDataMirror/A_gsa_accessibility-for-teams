@@ -1,0 +1,36 @@
+// Theme Variables Settings After Diff
+@use "uswds-core" with (
+  $theme-image-path:  '../../img/lib/uswds',
+  $theme-font-path:  '../../fonts/lib/uswds',
+  // colors
+  $theme-color-success-dark: "green-cool-50",
+  $theme-color-success-darker: "green-cool-60",
+  // components
+  $theme-header-font-family: "body",
+  //general
+  $theme-layout-grid-use-important: false,
+  //spacing
+  // $theme-site-max-width: "desktop", DOES NOT EXIST IN 3.0
+  //typography
+  $theme-font-role-heading: "sans",
+  $theme-font-role-alt: "sans",
+  $theme-body-font-family: "sans",
+  $theme-prose-font-family: "sans",
+  $theme-lead-measure: 6,
+  //utilities
+  $utilities-use-important: true,
+ );
+
+@forward "uswds-global";
+@forward "uswds-utilities";
+@forward "usa-accordion";
+@forward "usa-banner";
+@forward "usa-button";
+@forward "usa-header";
+@forward "usa-identifier";
+@forward "usa-prose";
+@forward "usa-search";
+@forward "usa-sidenav";
+
+// @forward "uswds";
+@forward 'custom-theme';
